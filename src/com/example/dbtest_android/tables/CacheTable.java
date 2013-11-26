@@ -12,7 +12,7 @@ public class CacheTable {
 
 	public static void onCreate(SQLiteDatabase db) {
 		db.execSQL("CREATE TABLE " + TABLE_NAME + " (" + FIELD_ID
-				+ " INTEGER AUTOINCREMENT PRIMARY KEY," + FIELD_URL + " TEXT,"
+				+ " INTEGER PRIMARY KEY AUTOINCREMENT," + FIELD_URL + " TEXT,"
 				+ FIELD_RETRIEVED_ON + " INTEGER," + FIELD_CACHED_OBJECT
 				+ " BLOB)");
 	}
