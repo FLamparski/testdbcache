@@ -13,7 +13,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 public abstract class BaseMethodCall {
-	private String buildURLString(String endpoint, String method,
+	protected String buildURLString(String endpoint, String method,
 			Map<String, String> params) {
 		/* Build a URL which for the method call */
 		StringBuilder methodCallStrBuilder = new StringBuilder(endpoint);
@@ -86,4 +86,6 @@ public abstract class BaseMethodCall {
 			throws IOException, XmlPullParserException;
 
 	abstract protected Map<String, String> collectParams();
+
+	abstract public String toURLString();
 }

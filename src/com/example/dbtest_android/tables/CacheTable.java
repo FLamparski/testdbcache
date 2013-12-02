@@ -5,10 +5,12 @@ import android.util.Log;
 
 public class CacheTable {
 	public static final String TABLE_NAME = "onsCache";
-	private static final String FIELD_ID = "id";
-	private static final String FIELD_URL = "url";
-	private static final String FIELD_CACHED_OBJECT = "cachedObject";
-	private static final String FIELD_RETRIEVED_ON = "retrievedOn";
+	public static final String FIELD_ID = "_id";
+	public static final String FIELD_URL = "url";
+	public static final String FIELD_CACHED_OBJECT = "cachedObject";
+	public static final String FIELD_RETRIEVED_ON = "retrievedOn";
+	public static final String[] PROJECTION_ALL = new String[] { FIELD_ID,
+			FIELD_URL, FIELD_CACHED_OBJECT, FIELD_RETRIEVED_ON };
 
 	public static void onCreate(SQLiteDatabase db) {
 		db.execSQL("CREATE TABLE " + TABLE_NAME + " (" + FIELD_ID

@@ -8,25 +8,26 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
-    
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
         <EditText
             android:id="@+id/editText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:ems="10"
             android:hint="Postcode..."
-            android:ems="10" >
-
-            <requestFocus />
+            android:imeOptions="actionSearch"
+            android:inputType="textCapCharacters" >
         </EditText>
-                
     </LinearLayout>
-    
+
     <ListView
-        android:id="@+id/listView1"
+        android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >

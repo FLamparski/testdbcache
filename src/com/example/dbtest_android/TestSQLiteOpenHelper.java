@@ -10,7 +10,7 @@ import com.example.dbtest_android.tables.CacheTable;
 public class TestSQLiteOpenHelper extends SQLiteOpenHelper {
 
 	public static final String DB_NAME = "TestDb";
-	public static final int DB_VERSION = 1;
+	public static final int DB_VERSION = 2;
 
 	public TestSQLiteOpenHelper(Context ctx) {
 		super(ctx, DB_NAME, null, DB_VERSION);
@@ -26,5 +26,6 @@ public class TestSQLiteOpenHelper extends SQLiteOpenHelper {
 		Log.i("database", "The database will be upgraded: " + oldVersion
 				+ " -> " + newVersion + ".");
 		CacheTable.onUpgrade(db);
+		onCreate(db);
 	}
 }
